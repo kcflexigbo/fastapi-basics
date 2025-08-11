@@ -29,3 +29,17 @@ def create_user(
     new_user = crud.crud_user.create_user(db=db, user=user_to_create)
 
     return new_user
+
+@user_api.get(
+    "/{username}",
+    response_model=User,
+    summary="get user by username",
+    description="API to get user by username"
+)
+def get_user_by_username(
+    username: str,
+    db: Session = Depends(get_db)
+):
+    user = crud.crud_user.get_user_by_username(db=db, username=username)
+
+    return user
