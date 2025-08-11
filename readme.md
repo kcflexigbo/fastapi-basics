@@ -84,6 +84,10 @@ Before you begin, ensure you have the following installed:
    ```bash
    pip install fastapi uvicorn sqlalchemy alembic psycopg2-binary python-dotenv
    ```
+    OR 
+    ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Environment Variables
 
